@@ -1,0 +1,17 @@
+{% load socialaccount %}
+{% providers_media_js %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task tsk tsk</title>
+</head>
+<body>
+  Hello   <strong> {{user}} </strong>
+  <br><br>
+  <button><a href = '{% provider_login_url 'google' %}'> Google Login</a></button>
+
+</body>
+</html>

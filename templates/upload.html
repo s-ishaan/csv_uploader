@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload tsk tsk</title>
+</head>
+<body>
+  <h2> Upload </h2>
+  <h3> A csv file </h3>
+  <br><br>
+  <form method = "post" enctype="multipart/form-data">
+  {% csrf_token %}
+    <input type = "file" name = "doc">
+    <button type = "submit">Upload csv</button>
+  </form>
+ {% if url %}
+  <p>Uploaded File : <a href = "{{url}}">{{url}}</a></p>
+  {% endif %}
+ 
+</body>
+</html>
