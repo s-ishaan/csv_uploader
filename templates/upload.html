@@ -15,8 +15,8 @@
     <input type = "file" name = "doc">
     <button type = "submit">Upload csv</button>
   </form>
- {% if url %}
-  <p>Uploaded File : <a href = "{{url}}">{{url}}</a></p>
+ {% if success_msg %}
+  <p>{{success_msg}}</p>
   {% endif %}
  
 </body>

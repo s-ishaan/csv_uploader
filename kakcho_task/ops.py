@@ -1,5 +1,3 @@
-def display(df):
-    print (df.head())
 
 def rate_diff(df):
     groups = df.groupby('Type')
@@ -32,5 +30,9 @@ def content_rating_diff(df):
 
 def rating_round_off(df):
     for index,row in df.iterrows():
-            df.loc[index, 'Rating Roundoff'] = round(row.Rating, 0)
+        df.loc[index, 'Rating Roundoff'] = round(row.Rating, 0)
+        df.to_csv('round_off.csv')
+
+
+
 
