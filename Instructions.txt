@@ -1,0 +1,12 @@
+Use FireFox to run the site. Chrome has stringent security measures, which couldn't by bypassed.
+
+1) Head to homepage and login, which redirects you to the upload page.
+
+2) Upload the csv file over there, and head to localhost:8000/download manually while data is
+   processed in the backend.
+
+3) /download has a list of urls. Right-click to get the url, and paste it in Chrome to initiate the download.
+
+4) The data is available as per required by the task. Feel free to check and give *honest* feedback.
+
+5) Thanks a lot for the opportunity.
