@@ -9,6 +9,16 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('upload/', views.upload, name="upload"),
     path('download/', views.download, name="download"),
+    path('paid/',views.get_paid),
+    path('free/',views.get_free),
+    path('everyone/',views.get_ev),
+    path('everyone_ten/',views.get_ev_ten),
+    path('teen/',views.get_teen),
+    path('mature/',views.get_mature),
+    path('unrated/',views.get_unrated),
+    path('adult/',views.get_adult),
+    path('round/',views.get_round),
+
 
 ]
 

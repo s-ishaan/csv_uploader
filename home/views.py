@@ -3,6 +3,7 @@ import pandas as pd
 from kakcho_task import ops
 import os
 from kakcho_task import settings
+from django.http import HttpResponse
 
 
 # Create your views here.
@@ -33,5 +34,59 @@ def upload(request):
 
     return render(request, 'upload.html')
 
-    
+def get_paid(request):  
+    with open('paid_apps.csv', encoding='utf8') as myfile:
+        response = HttpResponse(myfile, content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename=paid_apps.csv'
+        return response
+  
+def get_free(request):  
+    with open('free_apps.csv', encoding='utf8') as myfile:
+        response = HttpResponse(myfile, content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename=free_apps.csv'
+        return response
+  
+def get_ev(request):  
+    with open('everyone_apps.csv', encoding='utf8') as myfile:
+        response = HttpResponse(myfile, content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename=everyone_apps.csv'
+        return response
+  
+def get_ev_ten(request):  
+    with open('everyone_ten.csv', encoding='utf8') as myfile:
+        response = HttpResponse(myfile, content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename=everyone_ten_apps.csv'
+        return response
+
+def get_teen(request):  
+    with open('teen_apps.csv', encoding='utf8') as myfile:
+        response = HttpResponse(myfile, content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename=teen_apps.csv'
+        return response
+
+def get_mature(request):  
+    with open('mature_apps.csv', encoding='utf8') as myfile:
+        response = HttpResponse(myfile, content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename=mature_apps.csv'
+        return response
+
+def get_adult(request):  
+    with open('adults_apps.csv', encoding='utf8') as myfile:
+        response = HttpResponse(myfile, content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename=adult_apps.csv'
+        return response
+
+def get_unrated(request):  
+    with open('unrated_apps.csv', encoding='utf8') as myfile:
+        response = HttpResponse(myfile, content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename=unrated_apps.csv'
+        return response
+
+def get_round(request):  
+    with open('round_off.csv', encoding='utf8') as myfile:
+        response = HttpResponse(myfile, content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename=round_off.csv'
+        return response
+
+
 
